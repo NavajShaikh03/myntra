@@ -147,3 +147,80 @@ header{
     text-align: end;
     padding: 15px;
 }
+
+/* real cart image information add*/
+.items-container{
+    width: 80%;
+    margin: 40px 10px;
+}
+.item-container{
+    width:250px;
+}
+.item-image{
+ 
+    width: 100%;
+
+}
+.rating{
+    font-size:12px;
+    font-weight: 700;
+
+}
+.company-name{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight:700;
+    line-height:1;
+    color: #282c3f;
+    margin-bottom: 6px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.item-name{
+    color: #535766;
+    font-size:14px; 
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    display: block;
+}
+.price{
+    margin-top:10px;
+    font-size: 14px;
+    line-height:15px;
+    color: #282c3f;
+    white-space: nowrap;
+}
+.current-price{
+    font-size: 14px;
+    font-weight: 700;
+    color: #282c3f;
+}
+.original-price{
+    text-decoration: line-through;
+    color: #7e818c;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.discount{
+    color: #ff905a;
+    font-weight: 400;
+    font-size:13px ;
+    margin-left: 8px;
+
+}
+.btn-add-bag{
+    width: 100%;
+    margin-top: 8px;
+    background-color: lightgreen;
+    border-radius: 15px;
+    padding: 5px 15px;
+    border: none;
+    color:black;
+}
