@@ -1,11 +1,28 @@
 let bagItems =[];
+onLoad();
 
+function onLoad(){
+let bagItemsStr = localStorage.getItem('bagItems');
+bagItems = bagItemsStr ? JSON.parse(bagItemsStr):[];
 displayItemsOnHomePage();
+displayBagIcon();
+}
 
-function addToBag(items){
+function addToBag(itemsId){
     bagItems.push(itemsId);
+    localStorage.setItem('bagItems',JSON.stringify(bagItems))  // convert data in string and store in the localstorage
+    displayBagIcon();
 
 }
+function displayBagIcon(){
+    let bagItemCountElement = document.querySelector('.bag-item-count');
+    if (bagItems.length>0){
+        bagItemCountElement.style.visibility = 'visible'
+        bagItemCountElement.innerText = bagItems.length
+    }else{
+        bagItemCountElement.style.visibility = 'hidden'
+    }
+}  
 
 function displayItemsOnHomePage(){
     let itemsContainerElement = document.querySelector('.items-container');
@@ -26,7 +43,7 @@ items.forEach(items => {
                     <span class="original-price">Rs  ${items.current_price}</span>
                     <span class="discount">( ${items.discount_percentage}%  OFF)
                 </div>
-                <button class="btn-add-bag" onclick="addToBag(${items})">Add to Bag</button>
+                <button class="btn-add-bag" onclick="addToBag(${items.id})">Add to Bag</button>
             </div> `
 });
 itemsContainerElement.innerHTML = innerHTML
