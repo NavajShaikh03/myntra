@@ -109,7 +109,8 @@ header{
     color: #3e4152;
     max-height: 5em;
 }
-.category_items{
+.category_items, .items-container{
+    width: 80%;
     display: flex;
     flex-wrap: wrap;  /* go to next line responsive like mobile*/
     justify-content: space-evenly;
@@ -151,10 +152,11 @@ header{
 /* real cart image information add*/
 .items-container{
     width: 80%;
-    margin: 40px 10px;
+    margin: 40px 10%;
 }
 .item-container{
     width:250px;
+    margin:40px 10px ;
 }
 .item-image{
  
@@ -223,4 +225,5 @@ header{
     padding: 5px 15px;
     border: none;
     color:black;
+    cursor: pointer;
 }
