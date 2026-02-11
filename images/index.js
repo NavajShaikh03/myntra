@@ -7,7 +7,6 @@ bagItems = bagItemsStr ? JSON.parse(bagItemsStr):[];
 displayItemsOnHomePage();
 displayBagIcon();
 }
-
 function addToBag(itemsId){
     bagItems.push(itemsId);
     localStorage.setItem('bagItems',JSON.stringify(bagItems))  // convert data in string and store in the localstorage
@@ -17,7 +16,7 @@ function addToBag(itemsId){
 function displayBagIcon(){
     let bagItemCountElement = document.querySelector('.bag-item-count');
     if (bagItems.length>0){
-        bagItemCountElement.style.visibility = 'visible'
+        bagItemCountElement.style.visibility = 'visible'  // show the content 
         bagItemCountElement.innerText = bagItems.length
     }else{
         bagItemCountElement.style.visibility = 'hidden'
