@@ -45,5 +45,5 @@ items.forEach(items => {
                 <button class="btn-add-bag" onclick="addToBag(${items.id})">Add to Bag</button>
             </div> `
 });
-itemsContainerElement.innerHTML = innerHTML
+itemsContainerElement.innerHTML = innerHTML;
 }
